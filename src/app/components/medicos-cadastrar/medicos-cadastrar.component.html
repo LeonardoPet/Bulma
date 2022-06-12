@@ -5,18 +5,18 @@
     <!-- center -->
     <div class="columns is-centered">
     <div class="column is-left">
-    <form class="box">
+    <form [formGroup]="formCadastroMedico" (submit)="realizarCadastroMedico()" class="box">
         <!--Input Name -->
         <div class="field">
             <label class="label">Nome</label>
             <div class="control">
-              <input  class="input" type="text" placeholder="Escreva seu nome aqui">
+              <input formControlName="nome"  class="input" type="text" placeholder="Escreva seu nome aqui">
             </div>
           </div>
         
         <!-- Select especialidade -->
         <label class="label">Especialidade</label>
-        <div class="select">
+        <div formControlName="especialidade" class="select">
             <select>
               <option>Anestesista</option>
               <option>Cardiologista</option>
