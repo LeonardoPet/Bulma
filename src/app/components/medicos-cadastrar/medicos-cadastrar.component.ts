@@ -13,7 +13,7 @@ export class MedicosCadastrarComponent implements OnInit {
   constructor(private web:Webservice) { }
 
   ngOnInit(): void {
-    this.formInit
+    this.formInit()
   }
 
   formInit(){
