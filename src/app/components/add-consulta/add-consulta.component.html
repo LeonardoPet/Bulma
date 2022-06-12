@@ -6,35 +6,35 @@
 <div class="columns is-centered">
 <div class="column is-left">
 <!-- Form -->
-<form class="box">
+<form  [formGroup]="formConsulta" (submit)="realizarConsulta()" class="box" >
     <!-- Drop drown médico -->
-    <label class="label">Médico</label>
-        <div class="select">
+    <label  class="label">Médico</label>
+        <div formControlName="medico" class="select">
             <select>
               <option>Teste</option>
               <option>teste2</option>
             </select>
           </div>
     <!-- Select Paciente-->
-    <label class="label">Paciente</label>
-        <div class="select">
+    <label  class="label">Paciente</label>
+        <div formControlName="paciente" class="select">
             <select>
               <option>teste</option>
               <option>teste2</option>
             </select>
           </div>
     <!-- Drop data consulta -->
-    <div class="field">
+    <div  class="field">
         <label class="label">Data da Cosulta</label>
         <div class="control">
-          <input class="input" type="date" >
+          <input  formControlName="dataConsulta" class="input" type="date" >
         </div>
       </div>
     <!-- Drop dia consulta -->
-    <div class="field">
+    <div  class="field">
         <label class="label">Hora da Cosulta</label>
         <div class="control">
-          <input class="input" type="time" >
+          <input formControlName="horaConsulta" class="input" type="time" >
         </div>
       </div>
     <!-- cadastrar -->
